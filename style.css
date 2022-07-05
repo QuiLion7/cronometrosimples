@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+body {
+    background: linear-gradient(to right, #1449ac, #00fd8b);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80px;
+    color: #FFFFFF;
+    text-align: center;
+    box-shadow: 0 0 10px #000000;
+    border-radius: 0 0 20px 20px;
+}
+section {
+    width: 100vw;
+    min-height: calc(100vh - 160px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    width: 70vw;
+    height: 60vh;
+    margin: 20px 0;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #000000;
+    transition: 0.5s;
+}
+.container:hover {
+    box-shadow: 0 0 30px #000000;
+    transition: 0.5s; 
+}
+#crono {
+    font-size: 4rem;
+}
+#buttons {
+    margin: 10px 0;
+}
+#buttons button {
+    width: 75px;
+    height: 25px;
+    margin: 0 5px;
+    font-size: 0.7rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#buttons button:hover {
+    box-shadow: 0 0 3px #000000;
+    transition: 0.5s;
+}
+#start {
+    background-color: #1449ac;
+    color: #FFFFFF;
+}
+#stoped {
+    background-color: #FF0000;
+    color: #FFFFFF;
+}
+#restore {
+    background-color: #cccccc;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80px;
+    color: #FFFFFF;
+    box-shadow: 0 0 10px #000000;
+    border-radius: 20px 20px 0 0;
+    font-size: 0.9rem;
+}
+footer div a {
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: 0.5s;
+}
+footer div a:hover {
+    color:#000000;
+    transition: 0.5s;
+}
+#ref {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+}
+#ref p {
+    margin-right: 5px;
+}
+#banner--logos--footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+#banner--logos--footer a img {
+    width: 30px;
+    height: auto;
+    margin: 0 5px;
+    border-radius: 10px;
+    border: 2px solid #FFFFFF;
+    transition: 0.5s;
+}
+#banner--logos--footer a img:hover {
+    width: 45px;
+    filter: invert(100%);
+    transition: 0.5s;
+}
+
+@media (max-width:430px) {
+    header h1 {
+        font-size: 1.7rem;
+    }
+    .container {
+        width: 90vw;
+        height: 70vh;
+    }
+    footer {
+        font-size: 0.75rem;
+    }
+    #banner--logos--footer a img {
+        width: 25px;
+
+    }
+    #banner--logos--footer a img:hover {
+        width: 40px;
+
+    }
+}
