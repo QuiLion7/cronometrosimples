@@ -52,6 +52,9 @@ section {
 #crono {
     font-size: 4rem;
 }
+#milis {
+    font-size: 3rem;
+}
 #buttons {
     margin: 10px 0;
 }

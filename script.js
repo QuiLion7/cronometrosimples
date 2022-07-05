@@ -1,9 +1,9 @@
 let cronometro = document.querySelector('#crono');
 let buttonStart = document.querySelector('#start');
 let buttonStoped = document.querySelector('#stoped');
-let hours = 0;
 let min = 0;
 let sec = 0;
+let millis = 0;
 let timer;
 
 function interval() {
@@ -11,7 +11,7 @@ function interval() {
 }
 function start() {
     contagem();
-    timer = setInterval(contagem,1000);
+    timer = setInterval(contagem,10);
     buttonStart.disabled = true;
 }
 
@@ -30,16 +30,16 @@ function restore() {
 }
 
 function contagem() {
-    sec++;
-    if(sec === 60) {
-        sec = 0;
-        min++;
-        if(min === 60) {
+    millis+=1;
+    if(millis === 100) {
+        millis =0;
+        sec++;
+        if(sec === 60) {
+            millis = 0;
             sec = 0;
-            min = 0;
-            hours++;
+            min++;
         }
     }
-    cronometro.innerText = `${String(hours).padStart(2, '0')}:${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
+    cronometro.innerText = `${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}:${String(millis).padStart(2, '0')}`;
 }
 
